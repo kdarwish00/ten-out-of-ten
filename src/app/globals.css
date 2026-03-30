@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #f7f4ef;
+	--foreground: #1f2937;
+	--surface: #fffdf9;
+	--surface-strong: #0f172a;
+	--surface-border: #d6d3d1;
+	--accent: #b45309;
+	--accent-hover: #92400e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0f172a;
+		--foreground: #e5e7eb;
+		--surface: #111827;
+		--surface-strong: #020617;
+		--surface-border: #334155;
+		--accent: #f59e0b;
+		--accent-hover: #fbbf24;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+	.page-shell {
+		@apply mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 lg:px-8;
+	}
+
+	.hero-panel {
+		background: linear-gradient(140deg, #0f172a, #1e293b);
+		@apply rounded-2xl px-5 py-10 text-white sm:px-8;
+	}
+
+	.ui-card {
+		background: #ffffff;
+		border-color: var(--surface-border);
+		@apply rounded-2xl border p-6 shadow-sm;
+	}
+
+	.btn-primary {
+		background: var(--accent);
+		@apply rounded-full px-4 py-2 text-sm font-semibold text-white transition-colors;
+	}
+
+	.btn-primary:hover {
+		background: var(--accent-hover);
+	}
+
+	.btn-secondary {
+		@apply rounded-full border border-white/40 px-4 py-2 text-sm font-semibold text-white/95 transition-colors;
+	}
+
+	.btn-secondary:hover {
+		@apply bg-white/10;
+	}
 }

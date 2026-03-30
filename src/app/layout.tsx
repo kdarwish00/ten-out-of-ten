@@ -50,27 +50,27 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900">
+      <body className="min-h-full flex flex-col">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(createOrganizationJsonLd(siteConfig.domain)),
           }}
         />
-        <header className="border-b border-slate-200 bg-white">
+        <header className="sticky top-0 z-10 border-b border-stone-200/80 bg-[#fffdf9]/95 backdrop-blur">
           <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-            <Link href="/" className="text-lg font-semibold">
+            <Link href="/" className="text-lg font-bold text-slate-900">
               Ten Out Of Ten
             </Link>
             <nav className="flex items-center gap-4 text-sm font-medium text-slate-700">
-              <Link href="/ten-out-of-ten">Business 1</Link>
+              <Link href="/ten-out-of-ten">Barbershop</Link>
               <Link href="/ten-out-of-ten-tailor">Tailor</Link>
               <Link href="/contact">Contact</Link>
             </nav>
           </div>
         </header>
         {children}
-        <footer className="mt-10 border-t border-slate-200 bg-white">
+        <footer className="mt-10 border-t border-stone-200 bg-[#fffdf9]">
           <div className="mx-auto w-full max-w-5xl px-4 py-6 text-sm text-slate-600 sm:px-6 lg:px-8">
             <p>Ten Out Of Ten and Ten Out Of Ten Tailor</p>
           </div>
