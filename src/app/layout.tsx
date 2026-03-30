@@ -111,15 +111,15 @@ export default function RootLayout({
 
               <div>
                 <p className="text-sm font-semibold text-slate-900">Contact</p>
-                <ul className="mt-3 space-y-2 text-sm text-slate-700">
-                  {businesses.map((business) => (
-                    <li key={business.slug}>
-                      <a className="hover:underline" href={business.phoneHref}>
-                        Call {business.shortName}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                <p className="mt-3 text-sm text-slate-700">
+                  Shared number for Barbershop and Tailor:
+                </p>
+                <a
+                  className="mt-2 inline-block text-sm font-medium text-slate-900 hover:underline"
+                  href={businesses[0]?.phoneHref}
+                >
+                  {businesses[0]?.phone}
+                </a>
               </div>
             </div>
 
