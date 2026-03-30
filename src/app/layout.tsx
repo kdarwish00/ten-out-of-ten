@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 
 import { createOrganizationJsonLd } from "@/lib/seo";
-import { siteConfig } from "@/lib/business-data";
+import { businesses, siteConfig } from "@/lib/business-data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -70,9 +70,80 @@ export default function RootLayout({
           </div>
         </header>
         {children}
-        <footer className="mt-10 border-t border-stone-200 bg-[#fffdf9]">
-          <div className="mx-auto w-full max-w-5xl px-4 py-6 text-sm text-slate-600 sm:px-6 lg:px-8">
-            <p>Ten Out Of Ten and Ten Out Of Ten Tailor</p>
+        <footer className="mt-12 border-t border-stone-200 bg-[#fffdf9]">
+          <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+              <div>
+                <p className="text-sm font-semibold text-slate-900">
+                  Ten Out Of Ten
+                </p>
+                <p className="mt-2 text-sm text-slate-600">
+                  Barbershop and tailoring at the same location.
+                </p>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold text-slate-900">Quick links</p>
+                <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                  <li>
+                    <Link className="hover:underline" href="/ten-out-of-ten">
+                      Barbershop
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="hover:underline"
+                      href="/ten-out-of-ten-tailor"
+                    >
+                      Tailor
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="hover:underline" href="/contact">
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold text-slate-900">Location</p>
+                <p className="mt-3 text-sm text-slate-700">
+                  {businesses[0]?.address.street}, {businesses[0]?.address.city},{" "}
+                  {businesses[0]?.address.region} {businesses[0]?.address.postalCode}
+                </p>
+                <a
+                  className="mt-2 inline-block text-sm font-medium text-slate-900 hover:underline"
+                  href={businesses[0]?.address.mapUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Get directions
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold text-slate-900">Contact</p>
+                <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                  {businesses.map((business) => (
+                    <li key={business.slug}>
+                      <a className="hover:underline" href={business.phoneHref}>
+                        Call {business.shortName}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-10 flex flex-col gap-2 border-t border-stone-200 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
+              <p>© {new Date().getFullYear()} Ten Out Of Ten</p>
+              <p>
+                <Link className="hover:underline" href="/contact">
+                  Contact
+                </Link>
+              </p>
+            </div>
           </div>
         </footer>
       </body>
