@@ -21,7 +21,7 @@ export default function Home() {
           Two trusted businesses, one website
         </h1>
         <p className="mt-3 max-w-3xl text-slate-200">
-          Find details for Ten Out Of Ten barbershop and Ten Out Of Ten Tailor,
+          Find details for Ten Out Of Ten Barbershop and Ten Out Of Ten Tailor,
           including services, location, and Google reviews.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
