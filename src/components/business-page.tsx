@@ -82,16 +82,7 @@ export function BusinessPage({
               </p>
             ) : null}
           </section>
-        ) : (
-          <section className="ui-card">
-            <h2 className="text-xl font-semibold text-slate-900">Service areas</h2>
-            <ul className="mt-4 space-y-2 text-slate-700">
-              {business.serviceAreas.map((area) => (
-                <li key={area}>- {area}</li>
-              ))}
-            </ul>
-          </section>
-        )}
+        ) : null}
       </div>
 
       <section className="ui-card mt-6 max-w-2xl">

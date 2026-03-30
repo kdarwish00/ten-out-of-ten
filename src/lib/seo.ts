@@ -16,7 +16,6 @@ export function createLocalBusinessJsonLd(business: Business, pageUrl: string) {
       postalCode: business.address.postalCode,
       addressCountry: business.address.country,
     },
-    areaServed: business.serviceAreas,
     openingHoursSpecification: business.hours.map((hoursRow) => ({
       "@type": "OpeningHoursSpecification",
       description: hoursRow,

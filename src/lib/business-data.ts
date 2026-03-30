@@ -9,7 +9,6 @@ export type Business = {
     price: string;
   }>;
   pricingNote?: string;
-  serviceAreas: string[];
   phone: string;
   phoneHref: string;
   address: {
@@ -63,7 +62,6 @@ export const businesses: Business[] = [
       { service: "Face Cleaning", price: "£18" },
     ],
     pricingNote: "Cash only please.",
-    serviceAreas: ["Your City", "Nearby Area 1", "Nearby Area 2"],
     phone: "+44 07799414143",
     phoneHref: "tel:+447799414143",
     address: {
@@ -101,7 +99,6 @@ export const businesses: Business[] = [
       "Hem and fit corrections",
       "Custom tailoring",
     ],
-    serviceAreas: ["Your City", "Nearby Area 1", "Nearby Area 2"],
     phone: "+44 07799414143",
     phoneHref: "tel:+447799414143",
     address: {
