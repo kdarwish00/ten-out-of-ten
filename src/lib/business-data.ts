@@ -4,6 +4,11 @@ export type Business = {
   shortName: string;
   description: string;
   services: string[];
+  pricing?: Array<{
+    service: string;
+    price: string;
+  }>;
+  pricingNote?: string;
   serviceAreas: string[];
   phone: string;
   phoneHref: string;
@@ -39,11 +44,26 @@ export const businesses: Business[] = [
     description:
       "Professional local services focused on quality, reliability, and customer satisfaction.",
     services: [
-      "Custom service 1",
-      "Custom service 2",
-      "Custom service 3",
-      "Consultations",
+      "Hair cuts and styling",
+      "Skin fades",
+      "Beard services",
+      "Threading and wax",
+      "Hair and beard colouring",
+      "Face cleaning",
     ],
+    pricing: [
+      { service: "Hair Cut", price: "£14" },
+      { service: "Hair Wash", price: "£3" },
+      { service: "Skin Fade", price: "£16" },
+      { service: "OAP & Kids", price: "£13" },
+      { service: "Beard Shaving", price: "£10" },
+      { service: "Beard (Box or Line)", price: "£12" },
+      { service: "Threading & Wax", price: "£7" },
+      { service: "Hair Colouring", price: "£30" },
+      { service: "Beard Colouring", price: "£22" },
+      { service: "Face Cleaning", price: "£18" },
+    ],
+    pricingNote: "Cash only please.",
     serviceAreas: ["Your City", "Nearby Area 1", "Nearby Area 2"],
     phone: "(000) 000-0000",
     phoneHref: "tel:+10000000000",

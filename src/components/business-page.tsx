@@ -55,14 +55,36 @@ export function BusinessPage({
           </ul>
         </section>
 
-        <section className="ui-card">
-          <h2 className="text-xl font-semibold text-slate-900">Service areas</h2>
-          <ul className="mt-4 space-y-2 text-slate-700">
-            {business.serviceAreas.map((area) => (
-              <li key={area}>- {area}</li>
-            ))}
-          </ul>
-        </section>
+        {business.pricing?.length ? (
+          <section className="ui-card">
+            <h2 className="text-xl font-semibold text-slate-900">Prices</h2>
+            <ul className="mt-4 space-y-2 text-slate-700">
+              {business.pricing.map((item) => (
+                <li
+                  key={item.service}
+                  className="flex items-center justify-between gap-3 border-b border-slate-200 pb-2 last:border-b-0 last:pb-0"
+                >
+                  <span>{item.service}</span>
+                  <span className="font-semibold text-slate-900">{item.price}</span>
+                </li>
+              ))}
+            </ul>
+            {business.pricingNote ? (
+              <p className="mt-4 text-sm font-semibold uppercase tracking-wide text-red-600">
+                {business.pricingNote}
+              </p>
+            ) : null}
+          </section>
+        ) : (
+          <section className="ui-card">
+            <h2 className="text-xl font-semibold text-slate-900">Service areas</h2>
+            <ul className="mt-4 space-y-2 text-slate-700">
+              {business.serviceAreas.map((area) => (
+                <li key={area}>- {area}</li>
+              ))}
+            </ul>
+          </section>
+        )}
       </div>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
