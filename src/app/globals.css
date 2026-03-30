@@ -50,7 +50,7 @@ body {
 	}
 
 	.hero-panel {
-		background: linear-gradient(140deg, #0b1220, #1e293b);
+		background: linear-gradient(140deg, #0f172a, #2b1b12);
 		box-shadow:
 			0 24px 60px rgba(2, 6, 23, 0.25),
 			0 1px 0 rgba(255, 255, 255, 0.04) inset;
