@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
 
 import { createOrganizationJsonLd } from "@/lib/seo";
 import { businesses, siteConfig } from "@/lib/business-data";
+import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -57,18 +57,7 @@ export default function RootLayout({
             __html: JSON.stringify(createOrganizationJsonLd(siteConfig.domain)),
           }}
         />
-        <header className="sticky top-0 z-10 border-b border-stone-200/80 bg-[#fffdf9]/95 backdrop-blur">
-          <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-            <Link href="/" className="text-lg font-bold text-slate-900">
-              Ten Out Of Ten
-            </Link>
-            <nav className="flex items-center gap-4 text-sm font-medium text-slate-700">
-              <Link href="/ten-out-of-ten">Barbershop</Link>
-              <Link href="/ten-out-of-ten-tailor">Tailor</Link>
-              <Link href="/contact">Contact</Link>
-            </nav>
-          </div>
-        </header>
+        <SiteHeader />
         <div className="page-bg flex-1">{children}</div>
         <footer className="mt-12 border-t border-stone-200 bg-[#fffdf9]">
           <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
@@ -86,22 +75,19 @@ export default function RootLayout({
                 <p className="text-sm font-semibold text-slate-900">Quick links</p>
                 <ul className="mt-3 space-y-2 text-sm text-slate-700">
                   <li>
-                    <Link className="hover:underline" href="/ten-out-of-ten">
+                    <a className="hover:underline" href="/ten-out-of-ten">
                       Barbershop
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link
-                      className="hover:underline"
-                      href="/ten-out-of-ten-tailor"
-                    >
+                    <a className="hover:underline" href="/ten-out-of-ten-tailor">
                       Tailor
-                    </Link>
+                    </a>
                   </li>
                   <li>
-                    <Link className="hover:underline" href="/contact">
+                    <a className="hover:underline" href="/contact">
                       Contact
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -139,9 +125,9 @@ export default function RootLayout({
             <div className="mt-10 flex flex-col gap-2 border-t border-stone-200 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
               <p>© {new Date().getFullYear()} Ten Out Of Ten</p>
               <p>
-                <Link className="hover:underline" href="/contact">
+                <a className="hover:underline" href="/contact">
                   Contact
-                </Link>
+                </a>
               </p>
             </div>
           </div>
