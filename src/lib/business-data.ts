@@ -84,12 +84,12 @@ export const businesses: Business[] = [
     phoneHref: "tel:+10000000000",
     email: "tailor@example.com",
     address: {
-      street: "456 Tailor Ave",
+      street: "123 Main St",
       city: "Your City",
       region: "State",
       postalCode: "00000",
       country: "US",
-      mapUrl: "https://maps.google.com/?q=456+Tailor+Ave+Your+City",
+      mapUrl: "https://maps.google.com/?q=123+Main+St+Your+City",
     },
     hours: [
       "Mon-Fri 9:00 AM - 6:00 PM",
