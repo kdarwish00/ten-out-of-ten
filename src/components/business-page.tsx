@@ -21,15 +21,25 @@ export function BusinessPage({
 
       <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">{business.name}</h1>
-        <p className="mt-3 max-w-3xl text-slate-100">{business.description}</p>
+        <p className="mt-3 max-w-3xl text-slate-200">{business.description}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a className="btn-primary" href={business.phoneHref}>
             Call {business.shortName}
           </a>
-          <a className="btn-secondary" href={business.address.mapUrl} target="_blank" rel="noreferrer">
+          <a
+            className="rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            href={business.address.mapUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             Get directions
           </a>
-          <a className="btn-secondary" href={business.google.businessProfileUrl} target="_blank" rel="noreferrer">
+          <a
+            className="rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            href={business.google.businessProfileUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
             Google profile
           </a>
         </div>

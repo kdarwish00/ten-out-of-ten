@@ -18,7 +18,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold sm:text-4xl">
           Two trusted businesses, one website
         </h1>
-        <p className="mt-3 max-w-3xl text-slate-100">
+        <p className="mt-3 max-w-3xl text-slate-200">
           Find details for Ten Out Of Ten and Ten Out Of Ten Tailor, including
           services, locations, and Google reviews.
         </p>
@@ -26,10 +26,16 @@ export default function Home() {
           <Link href="/contact" className="btn-primary">
             Contact
           </Link>
-          <Link href="/ten-out-of-ten" className="btn-secondary">
+          <Link
+            href="/ten-out-of-ten"
+            className="rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
             Barbershop
           </Link>
-          <Link href="/ten-out-of-ten-tailor" className="btn-secondary">
+          <Link
+            href="/ten-out-of-ten-tailor"
+            className="rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+          >
             View Tailor
           </Link>
         </div>

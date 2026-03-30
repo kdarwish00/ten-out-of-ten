@@ -16,7 +16,7 @@ export default function ContactPage() {
     <main className="page-shell">
       <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">Contact</h1>
-        <p className="mt-3 text-slate-100">
+        <p className="mt-3 text-slate-200">
           Reach both businesses quickly by phone, email, maps, or Google
           profile.
         </p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 Directions
               </a>
               <a
-                className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-50"
+                className="rounded-full border border-blue-300 px-4 py-2 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
                 href={business.google.businessProfileUrl}
                 target="_blank"
                 rel="noreferrer"
