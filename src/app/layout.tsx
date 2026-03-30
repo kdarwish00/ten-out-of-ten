@@ -69,7 +69,7 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        {children}
+        <div className="page-bg flex-1">{children}</div>
         <footer className="mt-12 border-t border-stone-200 bg-[#fffdf9]">
           <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
