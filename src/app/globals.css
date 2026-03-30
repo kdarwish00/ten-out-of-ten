@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-	--background: #f7f4ef;
+	--background: #ffffff;
 	--foreground: #1f2937;
 	--surface: #fffdf9;
 	--surface-strong: #0f172a;
@@ -37,12 +37,7 @@ body {
 
 @layer components {
 	.page-bg {
-		background: radial-gradient(
-				1200px 600px at 50% 0%,
-				rgba(180, 83, 9, 0.08),
-				transparent 60%
-			),
-			var(--background);
+		background: var(--background);
 	}
 
 	.page-shell {
@@ -58,8 +53,8 @@ body {
 	}
 
 	.ui-card {
-		background: #ffffff;
-		border-color: var(--surface-border);
+		background: #eff6ff;
+		border-color: #bfdbfe;
 		@apply rounded-2xl border p-6 shadow-sm;
 	}
 

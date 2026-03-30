@@ -25,7 +25,7 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-10 border-b border-stone-200/80 bg-[#fffdf9]/95 backdrop-blur">
+    <header className="sticky top-0 z-10 border-b border-stone-200/80 bg-white/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="text-lg font-bold text-slate-900">
           Ten Out Of Ten
@@ -51,7 +51,7 @@ export function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-stone-200 bg-[#fffdf9] sm:hidden">
+        <div className="border-t border-stone-200 bg-white sm:hidden">
           <div className="mx-auto w-full max-w-5xl px-4 py-3 sm:px-6 lg:px-8">
             <nav className="flex flex-col gap-2 text-sm font-medium text-slate-700">
               {items.map((item) => (
