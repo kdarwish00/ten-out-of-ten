@@ -8,7 +8,6 @@ export function createLocalBusinessJsonLd(business: Business, pageUrl: string) {
     description: business.description,
     url: pageUrl,
     telephone: business.phone,
-    email: business.email,
     address: {
       "@type": "PostalAddress",
       streetAddress: business.address.street,

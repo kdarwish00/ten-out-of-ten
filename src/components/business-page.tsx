@@ -105,11 +105,6 @@ export function BusinessPage({
             {business.phone}
           </a>
         </p>
-        <p className="mt-2 text-slate-700">
-          <a className="underline" href={`mailto:${business.email}`}>
-            {business.email}
-          </a>
-        </p>
         <h3 className="mt-5 text-sm font-semibold uppercase tracking-wide text-slate-900">
           Hours
         </h3>

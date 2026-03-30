@@ -12,7 +12,6 @@ export type Business = {
   serviceAreas: string[];
   phone: string;
   phoneHref: string;
-  email: string;
   address: {
     street: string;
     city: string;
@@ -67,7 +66,6 @@ export const businesses: Business[] = [
     serviceAreas: ["Your City", "Nearby Area 1", "Nearby Area 2"],
     phone: "+44 07799414143",
     phoneHref: "tel:+447799414143",
-    email: "hello@example.com",
     address: {
       street: "7 Bell St",
       city: "London",
@@ -77,9 +75,13 @@ export const businesses: Business[] = [
       mapUrl: "https://maps.google.com/?q=7+Bell+St+London+NW1+5BY",
     },
     hours: [
-      "Mon-Fri 9:00 AM - 6:00 PM",
-      "Sat 10:00 AM - 4:00 PM",
-      "Sun Closed",
+      "Monday 10:00 AM – 8:00 PM",
+      "Tuesday 10:00 AM – 8:00 PM",
+      "Wednesday 10:00 AM – 8:00 PM",
+      "Thursday 9:00 AM – 8:00 PM",
+      "Friday 9:00 AM – 8:00 PM",
+      "Saturday 9:00 AM – 8:00 PM",
+      "Sunday 9:00 AM – 8:00 PM",
     ],
     google: {
       businessProfileUrl: "https://share.google/3KaK99LO6VeXWJJt8",
@@ -102,7 +104,6 @@ export const businesses: Business[] = [
     serviceAreas: ["Your City", "Nearby Area 1", "Nearby Area 2"],
     phone: "+44 07799414143",
     phoneHref: "tel:+447799414143",
-    email: "tailor@example.com",
     address: {
       street: "7 Bell St",
       city: "London",
@@ -112,9 +113,13 @@ export const businesses: Business[] = [
       mapUrl: "https://maps.google.com/?q=7+Bell+St+London+NW1+5BY",
     },
     hours: [
-      "Mon-Fri 9:00 AM - 6:00 PM",
-      "Sat 10:00 AM - 4:00 PM",
-      "Sun Closed",
+      "Monday 10:00 AM – 8:00 PM",
+      "Tuesday 10:00 AM – 8:00 PM",
+      "Wednesday 10:00 AM – 8:00 PM",
+      "Thursday 9:00 AM – 8:00 PM",
+      "Friday 9:00 AM – 8:00 PM",
+      "Saturday 9:00 AM – 8:00 PM",
+      "Sunday 9:00 AM – 8:00 PM",
     ],
     google: {
       businessProfileUrl: "https://share.google/ZwZ7aVAEcsRdpGz14",

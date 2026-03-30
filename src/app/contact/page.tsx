@@ -9,7 +9,7 @@ const mapEmbedUrl =
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact Ten Out Of Ten and Ten Out Of Ten Tailor. Call, email, map directions, and Google profile links.",
+    "Contact Ten Out Of Ten and Ten Out Of Ten Tailor. Call, map directions, and Google profile links.",
   alternates: {
     canonical: "/contact",
   },
@@ -21,8 +21,7 @@ export default function ContactPage() {
       <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">Contact</h1>
         <p className="mt-3 text-slate-200">
-          Reach both businesses quickly by phone, email, maps, or Google
-          profile.
+          Reach both businesses quickly by phone, maps, or Google profile.
         </p>
       </section>
 
@@ -36,11 +35,6 @@ export default function ContactPage() {
             <p className="mt-4">
               <a className="underline text-slate-700" href={business.phoneHref}>
                 {business.phone}
-              </a>
-            </p>
-            <p className="mt-2">
-              <a className="underline text-slate-700" href={`mailto:${business.email}`}>
-                {business.email}
               </a>
             </p>
             <p className="mt-3 text-slate-700">
