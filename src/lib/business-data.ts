@@ -65,8 +65,8 @@ export const businesses: Business[] = [
     ],
     pricingNote: "Cash only please.",
     serviceAreas: ["Your City", "Nearby Area 1", "Nearby Area 2"],
-    phone: "(000) 000-0000",
-    phoneHref: "tel:+10000000000",
+    phone: "+44 07799414143",
+    phoneHref: "tel:+447799414143",
     email: "hello@example.com",
     address: {
       street: "7 Bell St",
@@ -100,8 +100,8 @@ export const businesses: Business[] = [
       "Custom tailoring",
     ],
     serviceAreas: ["Your City", "Nearby Area 1", "Nearby Area 2"],
-    phone: "(000) 000-0000",
-    phoneHref: "tel:+10000000000",
+    phone: "+44 07799414143",
+    phoneHref: "tel:+447799414143",
     email: "tailor@example.com",
     address: {
       street: "7 Bell St",
