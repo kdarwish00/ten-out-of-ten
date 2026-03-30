@@ -58,11 +58,11 @@ export default function ContactPage() {
               </a>
               <a
                 className="rounded-full border border-blue-300 px-4 py-2 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
-                href={business.google.businessProfileUrl}
+                href={business.google.reviewUrl}
                 target="_blank"
                 rel="noreferrer"
               >
-                Google reviews
+                Leave a review
               </a>
             </div>
           </article>

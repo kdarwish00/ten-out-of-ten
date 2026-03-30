@@ -36,6 +36,14 @@ export function BusinessPage({
           </a>
           <a
             className="rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+            href={business.google.reviewUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Leave a review
+          </a>
+          <a
+            className="rounded-full border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             href={business.google.businessProfileUrl}
             target="_blank"
             rel="noreferrer"
@@ -116,7 +124,7 @@ export function BusinessPage({
 
         <ReviewsSection
           placeId={business.google.placeId}
-          fallbackProfileUrl={business.google.businessProfileUrl}
+          fallbackReviewUrl={business.google.reviewUrl}
           title={`${business.shortName} Google Reviews`}
         />
       </div>

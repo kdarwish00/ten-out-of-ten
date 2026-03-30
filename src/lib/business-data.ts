@@ -24,6 +24,7 @@ export type Business = {
   hours: string[];
   google: {
     businessProfileUrl: string;
+    reviewUrl: string;
     placeId: string;
   };
   sameAs: string[];
@@ -83,6 +84,7 @@ export const businesses: Business[] = [
     ],
     google: {
       businessProfileUrl: "https://share.google/3KaK99LO6VeXWJJt8",
+      reviewUrl: "https://g.page/r/CZV3S94lfwqwEBM/review",
       placeId: "REPLACE_WITH_PLACE_ID_1",
     },
     sameAs: ["https://share.google/3KaK99LO6VeXWJJt8"],
@@ -118,6 +120,7 @@ export const businesses: Business[] = [
     ],
     google: {
       businessProfileUrl: "https://share.google/ZwZ7aVAEcsRdpGz14",
+      reviewUrl: "https://g.page/r/CRuSg0vJcT_FEBM/review",
       placeId: "REPLACE_WITH_PLACE_ID_2",
     },
     sameAs: ["https://share.google/ZwZ7aVAEcsRdpGz14"],

@@ -2,7 +2,7 @@ import { getGoogleReviews } from "@/lib/google-reviews";
 
 type ReviewsSectionProps = {
   placeId: string;
-  fallbackProfileUrl: string;
+  fallbackReviewUrl: string;
   title: string;
 };
 
@@ -13,7 +13,7 @@ function renderStars(rating: number) {
 
 export async function ReviewsSection({
   placeId,
-  fallbackProfileUrl,
+  fallbackReviewUrl,
   title,
 }: ReviewsSectionProps) {
   const reviewsData = await getGoogleReviews(placeId);
@@ -27,7 +27,7 @@ export async function ReviewsSection({
         </p>
         <a
           className="btn-primary mt-4 inline-flex"
-          href={fallbackProfileUrl}
+          href={fallbackReviewUrl}
           target="_blank"
           rel="noreferrer"
         >
@@ -62,7 +62,7 @@ export async function ReviewsSection({
 
       <a
         className="btn-primary mt-6 inline-flex"
-        href={reviewsData.profileUrl ?? fallbackProfileUrl}
+        href={reviewsData.profileUrl ?? fallbackReviewUrl}
         target="_blank"
         rel="noreferrer"
       >
