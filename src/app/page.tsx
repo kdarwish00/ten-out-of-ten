@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BusinessCard } from "@/components/business-card";
+import { ImageCarousel } from "@/components/image-carousel";
 import { HomeReviews } from "@/components/home-reviews";
 import { LocationMapSection } from "@/components/location-map";
 import { businesses, primaryKeywords } from "@/lib/business-data";
+import { galleryImages } from "@/lib/gallery";
 import { barbershopReviews, tailorReviews } from "@/lib/manual-reviews";
 
 export const metadata: Metadata = {
@@ -43,6 +45,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <ImageCarousel className="mt-8" images={galleryImages} />
 
       <section className="mt-8 grid gap-6 md:grid-cols-2">
         {businesses.map((business) => (
