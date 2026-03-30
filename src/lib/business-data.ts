@@ -38,7 +38,7 @@ export const siteConfig = {
 export const businesses: Business[] = [
   {
     slug: "ten-out-of-ten",
-    name: "Ten Out Of Ten",
+    name: "Ten Out Of Ten Barbershop",
     shortName: "Ten Out Of Ten",
     description:
       "Professional local services focused on quality, reliability, and customer satisfaction.",
