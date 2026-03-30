@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 
 import { businesses } from "@/lib/business-data";
 
+const mapShareUrl = "https://maps.app.goo.gl/ujfDma55k6mjdnuX8";
+const mapEmbedUrl =
+  "https://www.google.com/maps?q=7+Bell+St,+London+NW1+5BY&output=embed";
+
 export const metadata: Metadata = {
   title: "Contact",
   description:
@@ -63,6 +67,29 @@ export default function ContactPage() {
             </div>
           </article>
         ))}
+      </section>
+
+      <section className="ui-card mt-8">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h2 className="text-xl font-semibold text-slate-900">Find us on map</h2>
+          <a
+            className="rounded-full border border-blue-300 px-4 py-2 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
+            href={mapShareUrl}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open in Google Maps
+          </a>
+        </div>
+        <div className="mt-4 overflow-hidden rounded-xl border border-slate-200">
+          <iframe
+            title="Ten Out Of Ten location map"
+            src={mapEmbedUrl}
+            className="h-[360px] w-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
       </section>
     </main>
   );
