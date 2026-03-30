@@ -1,5 +1,4 @@
 import type { Business } from "@/lib/business-data";
-import { ReviewsSection } from "@/components/reviews-section";
 
 type BusinessPageProps = {
   business: Business;
@@ -95,39 +94,31 @@ export function BusinessPage({
         )}
       </div>
 
-      <div className="mt-6 grid gap-6 lg:grid-cols-2">
-        <section className="ui-card">
-          <h2 className="text-xl font-semibold text-slate-900">Contact details</h2>
-          <p className="mt-3 text-slate-700">
-            {business.address.street}, {business.address.city}, {business.address.region}{" "}
-            {business.address.postalCode}
-          </p>
-          <p className="mt-2 text-slate-700">
-            <a className="underline" href={business.phoneHref}>
-              {business.phone}
-            </a>
-          </p>
-          <p className="mt-2 text-slate-700">
-            <a className="underline" href={`mailto:${business.email}`}>
-              {business.email}
-            </a>
-          </p>
-          <h3 className="mt-5 text-sm font-semibold uppercase tracking-wide text-slate-900">
-            Hours
-          </h3>
-          <ul className="mt-2 space-y-1 text-sm text-slate-700">
-            {business.hours.map((hoursRow) => (
-              <li key={hoursRow}>{hoursRow}</li>
-            ))}
-          </ul>
-        </section>
-
-        <ReviewsSection
-          placeId={business.google.placeId}
-          fallbackReviewUrl={business.google.reviewUrl}
-          title={`${business.shortName} Google Reviews`}
-        />
-      </div>
+      <section className="ui-card mt-6 max-w-2xl">
+        <h2 className="text-xl font-semibold text-slate-900">Contact details</h2>
+        <p className="mt-3 text-slate-700">
+          {business.address.street}, {business.address.city}, {business.address.region}{" "}
+          {business.address.postalCode}
+        </p>
+        <p className="mt-2 text-slate-700">
+          <a className="underline" href={business.phoneHref}>
+            {business.phone}
+          </a>
+        </p>
+        <p className="mt-2 text-slate-700">
+          <a className="underline" href={`mailto:${business.email}`}>
+            {business.email}
+          </a>
+        </p>
+        <h3 className="mt-5 text-sm font-semibold uppercase tracking-wide text-slate-900">
+          Hours
+        </h3>
+        <ul className="mt-2 space-y-1 text-sm text-slate-700">
+          {business.hours.map((hoursRow) => (
+            <li key={hoursRow}>{hoursRow}</li>
+          ))}
+        </ul>
+      </section>
 
       <p className="mt-6 text-sm text-slate-500">Direct page URL: {pageUrl}</p>
     </main>

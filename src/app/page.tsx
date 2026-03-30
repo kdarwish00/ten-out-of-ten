@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { BusinessCard } from "@/components/business-card";
+import { HomeReviews } from "@/components/home-reviews";
 import { businesses, primaryKeywords } from "@/lib/business-data";
+import { barbershopReviews, tailorReviews } from "@/lib/manual-reviews";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -46,6 +48,8 @@ export default function Home() {
           <BusinessCard key={business.slug} business={business} />
         ))}
       </section>
+
+      <HomeReviews barbershop={barbershopReviews} tailor={tailorReviews} />
     </main>
   );
 }
