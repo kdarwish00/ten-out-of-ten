@@ -16,7 +16,7 @@ export default function ContactPage() {
     <main className="page-shell">
       <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">Contact</h1>
-        <p className="mt-3 text-slate-700">
+        <p className="mt-3 text-slate-100">
           Reach both businesses quickly by phone, email, maps, or Google
           profile.
         </p>

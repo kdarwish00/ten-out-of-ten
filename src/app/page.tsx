@@ -18,7 +18,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold sm:text-4xl">
           Two trusted businesses, one website
         </h1>
-        <p className="mt-3 max-w-3xl text-slate-200">
+        <p className="mt-3 max-w-3xl text-slate-100">
           Find details for Ten Out Of Ten and Ten Out Of Ten Tailor, including
           services, locations, and Google reviews.
         </p>

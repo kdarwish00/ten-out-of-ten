@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-	--background: #0f172a;
-	--foreground: #e5e7eb;
+	--background: #f3f7fb;
+	--foreground: #1e293b;
 	--surface: #fffdf9;
 	--surface-strong: #0f172a;
-	--surface-border: #334155;
-	--accent: #f59e0b;
-	--accent-hover: #fbbf24;
+	--surface-border: #cbd5e1;
+	--accent: #0f766e;
+	--accent-hover: #0d9488;
 }
 
 @theme inline {
@@ -19,13 +19,13 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #0f172a;
-		--foreground: #e5e7eb;
+		--background: #f3f7fb;
+		--foreground: #1e293b;
 		--surface: #111827;
-		--surface-strong: #020617;
-		--surface-border: #334155;
-		--accent: #f59e0b;
-		--accent-hover: #fbbf24;
+		--surface-strong: #0b3b3b;
+		--surface-border: #cbd5e1;
+		--accent: #0f766e;
+		--accent-hover: #0d9488;
 	}
 }
 
@@ -45,16 +45,16 @@ body {
 	}
 
 	.hero-panel {
-		background: #ffffff;
+		background: linear-gradient(135deg, #0f766e, #1e3a8a);
 		box-shadow:
 			0 24px 60px rgba(2, 6, 23, 0.25),
 			0 1px 0 rgba(255, 255, 255, 0.04) inset;
-		@apply rounded-2xl px-5 py-10 text-slate-900 ring-1 ring-white/10 sm:px-8;
+		@apply rounded-2xl px-5 py-10 text-white ring-1 ring-white/15 sm:px-8;
 	}
 
 	.ui-card {
 		background: #ffffff;
-		border-color: #e2e8f0;
+		border-color: #dbe4f0;
 		@apply rounded-2xl border p-6 text-slate-900 shadow-sm;
 	}
 

@@ -25,15 +25,15 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-10 border-b border-stone-200/80 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-10 border-b border-teal-900/80 bg-[#0b3b3b]/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-lg font-bold text-slate-900">
+        <Link href="/" className="text-lg font-bold text-white">
           Ten Out Of Ten
         </Link>
 
-        <nav className="hidden items-center gap-4 text-sm font-medium text-slate-700 sm:flex">
+        <nav className="hidden items-center gap-4 text-sm font-medium text-slate-100 sm:flex">
           {items.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-slate-900">
+            <Link key={item.href} href={item.href} className="hover:text-white">
               {item.label}
             </Link>
           ))}
@@ -41,7 +41,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-stone-50 sm:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/20 sm:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={isOpen}
           onClick={handleToggleMenu}
@@ -51,14 +51,14 @@ export function SiteHeader() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-stone-200 bg-white sm:hidden">
+        <div className="border-t border-teal-900 bg-[#0b3b3b] sm:hidden">
           <div className="mx-auto w-full max-w-5xl px-4 py-3 sm:px-6 lg:px-8">
-            <nav className="flex flex-col gap-2 text-sm font-medium text-slate-700">
+            <nav className="flex flex-col gap-2 text-sm font-medium text-slate-100">
               {items.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="rounded-xl px-3 py-2 transition-colors hover:bg-stone-50 hover:text-slate-900"
+                  className="rounded-xl px-3 py-2 transition-colors hover:bg-white/10 hover:text-white"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

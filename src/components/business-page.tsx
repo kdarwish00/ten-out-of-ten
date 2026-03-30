@@ -21,7 +21,7 @@ export function BusinessPage({
 
       <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">{business.name}</h1>
-        <p className="mt-3 max-w-3xl text-slate-700">{business.description}</p>
+        <p className="mt-3 max-w-3xl text-slate-100">{business.description}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a className="btn-primary" href={business.phoneHref}>
             Call {business.shortName}
