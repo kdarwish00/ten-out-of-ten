@@ -31,7 +31,6 @@ export default function TenOutOfTenTailorPage() {
   return (
     <BusinessPage
       business={business}
-      pageUrl={pageUrl}
       localBusinessJsonLd={createLocalBusinessJsonLd(business, pageUrl)}
     />
   );

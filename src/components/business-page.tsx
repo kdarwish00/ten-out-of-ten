@@ -2,13 +2,11 @@ import type { Business } from "@/lib/business-data";
 
 type BusinessPageProps = {
   business: Business;
-  pageUrl: string;
   localBusinessJsonLd: object;
 };
 
 export function BusinessPage({
   business,
-  pageUrl,
   localBusinessJsonLd,
 }: BusinessPageProps) {
   return (
@@ -105,8 +103,6 @@ export function BusinessPage({
           ))}
         </ul>
       </section>
-
-      <p className="mt-6 text-sm text-slate-500">Direct page URL: {pageUrl}</p>
     </main>
   );
 }
