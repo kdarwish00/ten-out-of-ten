@@ -19,13 +19,13 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #0f172a;
-		--foreground: #e5e7eb;
-		--surface: #111827;
-		--surface-strong: #020617;
-		--surface-border: #334155;
-		--accent: #f59e0b;
-		--accent-hover: #fbbf24;
+		--background: #ffffff;
+		--foreground: #1f2937;
+		--surface: #fffdf9;
+		--surface-strong: #0f172a;
+		--surface-border: #d6d3d1;
+		--accent: #b45309;
+		--accent-hover: #92400e;
 	}
 }
 
