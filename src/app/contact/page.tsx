@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto w-full max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
-      <section className="rounded-2xl bg-slate-900 px-5 py-10 text-white sm:px-8">
+    <main className="page-shell">
+      <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">Contact</h1>
         <p className="mt-3 text-slate-200">
           Reach both businesses quickly by phone, email, maps, or Google
@@ -26,26 +26,26 @@ export default function ContactPage() {
         {businesses.map((business) => (
           <article
             key={business.slug}
-            className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"
+            className="ui-card"
           >
-            <h2 className="text-xl font-semibold text-slate-900">{business.name}</h2>
+            <h2 className="text-xl font-semibold text-white">{business.name}</h2>
             <p className="mt-4">
-              <a className="underline" href={business.phoneHref}>
+              <a className="underline text-slate-200" href={business.phoneHref}>
                 {business.phone}
               </a>
             </p>
             <p className="mt-2">
-              <a className="underline" href={`mailto:${business.email}`}>
+              <a className="underline text-slate-200" href={`mailto:${business.email}`}>
                 {business.email}
               </a>
             </p>
-            <p className="mt-3 text-slate-700">
+            <p className="mt-3 text-slate-200">
               {business.address.street}, {business.address.city},{" "}
               {business.address.region} {business.address.postalCode}
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <a
-                className="rounded-full bg-slate-900 px-4 py-2 text-sm font-semibold text-white"
+                className="btn-primary"
                 href={business.address.mapUrl}
                 target="_blank"
                 rel="noreferrer"
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 Directions
               </a>
               <a
-                className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900"
+                className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
                 href={business.google.businessProfileUrl}
                 target="_blank"
                 rel="noreferrer"
