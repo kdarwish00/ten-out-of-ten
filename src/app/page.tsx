@@ -18,7 +18,7 @@ export default function Home() {
     <main className="page-shell">
       <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">
-          Two trusted businesses, one website
+          Barbershop & Tailor in One Place
         </h1>
         <p className="mt-3 max-w-3xl text-slate-200">
           Find details for Ten Out Of Ten Barbershop and Ten Out Of Ten Tailor,
