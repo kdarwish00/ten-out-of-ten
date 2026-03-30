@@ -16,7 +16,7 @@ export default function ContactPage() {
     <main className="page-shell">
       <section className="hero-panel">
         <h1 className="text-3xl font-bold sm:text-4xl">Contact</h1>
-        <p className="mt-3 text-slate-200">
+        <p className="mt-3 text-slate-700">
           Reach both businesses quickly by phone, email, maps, or Google
           profile.
         </p>
@@ -28,18 +28,18 @@ export default function ContactPage() {
             key={business.slug}
             className="ui-card"
           >
-            <h2 className="text-xl font-semibold text-white">{business.name}</h2>
+            <h2 className="text-xl font-semibold text-slate-900">{business.name}</h2>
             <p className="mt-4">
-              <a className="underline text-slate-200" href={business.phoneHref}>
+              <a className="underline text-slate-700" href={business.phoneHref}>
                 {business.phone}
               </a>
             </p>
             <p className="mt-2">
-              <a className="underline text-slate-200" href={`mailto:${business.email}`}>
+              <a className="underline text-slate-700" href={`mailto:${business.email}`}>
                 {business.email}
               </a>
             </p>
-            <p className="mt-3 text-slate-200">
+            <p className="mt-3 text-slate-700">
               {business.address.street}, {business.address.city},{" "}
               {business.address.region} {business.address.postalCode}
             </p>
@@ -53,7 +53,7 @@ export default function ContactPage() {
                 Directions
               </a>
               <a
-                className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors hover:bg-slate-50"
                 href={business.google.businessProfileUrl}
                 target="_blank"
                 rel="noreferrer"

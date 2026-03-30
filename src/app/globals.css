@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-	--background: #ffffff;
-	--foreground: #1f2937;
+	--background: #0f172a;
+	--foreground: #e5e7eb;
 	--surface: #fffdf9;
 	--surface-strong: #0f172a;
-	--surface-border: #d6d3d1;
-	--accent: #b45309;
-	--accent-hover: #92400e;
+	--surface-border: #334155;
+	--accent: #f59e0b;
+	--accent-hover: #fbbf24;
 }
 
 @theme inline {
@@ -19,13 +19,13 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background: #ffffff;
-		--foreground: #1f2937;
-		--surface: #fffdf9;
-		--surface-strong: #0f172a;
-		--surface-border: #d6d3d1;
-		--accent: #b45309;
-		--accent-hover: #92400e;
+		--background: #0f172a;
+		--foreground: #e5e7eb;
+		--surface: #111827;
+		--surface-strong: #020617;
+		--surface-border: #334155;
+		--accent: #f59e0b;
+		--accent-hover: #fbbf24;
 	}
 }
 
@@ -45,17 +45,17 @@ body {
 	}
 
 	.hero-panel {
-		background: linear-gradient(140deg, #0f172a, #1e293b);
+		background: #ffffff;
 		box-shadow:
 			0 24px 60px rgba(2, 6, 23, 0.25),
 			0 1px 0 rgba(255, 255, 255, 0.04) inset;
-		@apply rounded-2xl px-5 py-10 text-white ring-1 ring-white/10 sm:px-8;
+		@apply rounded-2xl px-5 py-10 text-slate-900 ring-1 ring-white/10 sm:px-8;
 	}
 
 	.ui-card {
-		background: #0f172a;
-		border-color: #1e293b;
-		@apply rounded-2xl border p-6 text-white shadow-sm;
+		background: #ffffff;
+		border-color: #e2e8f0;
+		@apply rounded-2xl border p-6 text-slate-900 shadow-sm;
 	}
 
 	.btn-primary {
@@ -68,10 +68,10 @@ body {
 	}
 
 	.btn-secondary {
-		@apply rounded-full border border-white/40 px-4 py-2 text-sm font-semibold text-white/95 transition-colors;
+		@apply rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-900 transition-colors;
 	}
 
 	.btn-secondary:hover {
-		@apply bg-white/10;
+		@apply bg-slate-50;
 	}
 }

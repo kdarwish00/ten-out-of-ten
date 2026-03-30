@@ -59,33 +59,33 @@ export default function RootLayout({
         />
         <SiteHeader />
         <div className="page-bg flex-1">{children}</div>
-        <footer className="mt-12 border-t border-slate-800 bg-slate-900">
+        <footer className="mt-12 border-t border-stone-200 bg-white">
           <div className="mx-auto w-full max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               <div>
-                <p className="text-sm font-semibold text-white">
+                <p className="text-sm font-semibold text-slate-900">
                   Ten Out Of Ten
                 </p>
-                <p className="mt-2 text-sm text-slate-300">
+                <p className="mt-2 text-sm text-slate-600">
                   Barbershop and tailoring at the same location.
                 </p>
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-white">Quick links</p>
-                <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <p className="text-sm font-semibold text-slate-900">Quick links</p>
+                <ul className="mt-3 space-y-2 text-sm text-slate-700">
                   <li>
-                    <a className="hover:text-white hover:underline" href="/ten-out-of-ten">
+                    <a className="hover:underline" href="/ten-out-of-ten">
                       Barbershop
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-white hover:underline" href="/ten-out-of-ten-tailor">
+                    <a className="hover:underline" href="/ten-out-of-ten-tailor">
                       Tailor
                     </a>
                   </li>
                   <li>
-                    <a className="hover:text-white hover:underline" href="/contact">
+                    <a className="hover:underline" href="/contact">
                       Contact
                     </a>
                   </li>
@@ -93,13 +93,13 @@ export default function RootLayout({
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-white">Location</p>
-                <p className="mt-3 text-sm text-slate-300">
+                <p className="text-sm font-semibold text-slate-900">Location</p>
+                <p className="mt-3 text-sm text-slate-700">
                   {businesses[0]?.address.street}, {businesses[0]?.address.city},{" "}
                   {businesses[0]?.address.region} {businesses[0]?.address.postalCode}
                 </p>
                 <a
-                  className="mt-2 inline-block text-sm font-medium text-slate-200 hover:text-white hover:underline"
+                  className="mt-2 inline-block text-sm font-medium text-slate-900 hover:underline"
                   href={businesses[0]?.address.mapUrl}
                   target="_blank"
                   rel="noreferrer"
@@ -109,11 +109,11 @@ export default function RootLayout({
               </div>
 
               <div>
-                <p className="text-sm font-semibold text-white">Contact</p>
-                <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                <p className="text-sm font-semibold text-slate-900">Contact</p>
+                <ul className="mt-3 space-y-2 text-sm text-slate-700">
                   {businesses.map((business) => (
                     <li key={business.slug}>
-                      <a className="hover:text-white hover:underline" href={business.phoneHref}>
+                      <a className="hover:underline" href={business.phoneHref}>
                         Call {business.shortName}
                       </a>
                     </li>
@@ -122,10 +122,10 @@ export default function RootLayout({
               </div>
             </div>
 
-            <div className="mt-10 flex flex-col gap-2 border-t border-slate-800 pt-6 text-xs text-slate-400 sm:flex-row sm:items-center sm:justify-between">
+            <div className="mt-10 flex flex-col gap-2 border-t border-stone-200 pt-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
               <p>© {new Date().getFullYear()} Ten Out Of Ten</p>
               <p>
-                <a className="hover:text-white hover:underline" href="/contact">
+                <a className="hover:underline" href="/contact">
                   Contact
                 </a>
               </p>
