@@ -62,10 +62,10 @@ export const businesses: Business[] = [
       "Sun Closed",
     ],
     google: {
-      businessProfileUrl: "https://g.page/r/your-business-profile",
+      businessProfileUrl: "https://share.google/3KaK99LO6VeXWJJt8",
       placeId: "REPLACE_WITH_PLACE_ID_1",
     },
-    sameAs: ["https://g.page/r/your-business-profile"],
+    sameAs: ["https://share.google/3KaK99LO6VeXWJJt8"],
   },
   {
     slug: "ten-out-of-ten-tailor",
@@ -97,10 +97,10 @@ export const businesses: Business[] = [
       "Sun Closed",
     ],
     google: {
-      businessProfileUrl: "https://g.page/r/your-tailor-profile",
+      businessProfileUrl: "https://share.google/ZwZ7aVAEcsRdpGz14",
       placeId: "REPLACE_WITH_PLACE_ID_2",
     },
-    sameAs: ["https://g.page/r/your-tailor-profile"],
+    sameAs: ["https://share.google/ZwZ7aVAEcsRdpGz14"],
   },
 ];
 
