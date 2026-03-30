@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import { createOrganizationJsonLd } from "@/lib/seo";
 import { businesses, siteConfig } from "@/lib/business-data";
+import { PhoneFab } from "@/components/phone-fab";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
@@ -132,6 +133,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <PhoneFab />
       </body>
     </html>
   );
