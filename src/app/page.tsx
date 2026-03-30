@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { BusinessCard } from "@/components/business-card";
 import { HomeReviews } from "@/components/home-reviews";
+import { LocationMapSection } from "@/components/location-map";
 import { businesses, primaryKeywords } from "@/lib/business-data";
 import { barbershopReviews, tailorReviews } from "@/lib/manual-reviews";
 
@@ -48,6 +49,8 @@ export default function Home() {
           <BusinessCard key={business.slug} business={business} />
         ))}
       </section>
+
+      <LocationMapSection />
 
       <HomeReviews barbershop={barbershopReviews} tailor={tailorReviews} />
     </main>

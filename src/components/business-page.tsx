@@ -1,3 +1,4 @@
+import { LocationMapSection } from "@/components/location-map";
 import type { Business } from "@/lib/business-data";
 
 type BusinessPageProps = {
@@ -103,6 +104,11 @@ export function BusinessPage({
           ))}
         </ul>
       </section>
+
+      <LocationMapSection
+        iframeTitle={`${business.name} — location map`}
+        className="mt-8 max-w-none"
+      />
     </main>
   );
 }
